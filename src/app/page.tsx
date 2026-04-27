@@ -121,7 +121,7 @@ export default function HomePage() {
           ))}
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 py-24 grid lg:grid-cols-2 gap-12 items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 pt-8 pb-16 grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: copy with staggered reveal */}
           <div>
             {/* Prominent logo */}
