@@ -112,7 +112,7 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="px-3 py-2 text-sm font-600 text-brand-dark hover:text-brand-red transition-colors uppercase tracking-wide font-condensed"
+                    className="nav-link-sweep px-3 py-2 text-sm font-600 text-brand-dark hover:text-brand-red transition-colors uppercase tracking-wide font-condensed"
                   >
                     {link.label}
                   </Link>

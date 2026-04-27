@@ -3,6 +3,8 @@ import { Barlow, Barlow_Condensed } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import CustomCursor from '@/components/ui/CustomCursor'
+import ScrollProgress from '@/components/ui/ScrollProgress'
 import { siteConfig } from '@/data/siteConfig'
 
 const barlow = Barlow({
@@ -57,6 +59,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-IN" className={`${barlow.variable} ${barlowCondensed.variable}`}>
       <body className="font-sans bg-white text-brand-dark antialiased">
+        <ScrollProgress />
+        <CustomCursor />
         <Navbar />
         <main>{children}</main>
         <Footer />

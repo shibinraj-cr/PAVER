@@ -8,6 +8,7 @@ import { getFeaturedPosts } from '@/data/blog'
 import { faqData } from '@/data/faq'
 import SchemaOrg from '@/components/ui/SchemaOrg'
 import ProductBagImage from '@/components/ui/ProductBagImage'
+import AnimateOnScroll from '@/components/ui/AnimateOnScroll'
 
 export const metadata: Metadata = {
   title: siteConfig.seo.defaultTitle,
@@ -82,28 +83,50 @@ export default function HomePage() {
       {/* HERO SECTION                                                    */}
       {/* ═══════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-[92vh] flex items-center bg-hero-gradient overflow-hidden">
-        {/* Diagonal gold accent */}
-        <div className="absolute right-0 top-0 w-1/3 h-full bg-brand-red opacity-20 skew-x-[-8deg] origin-top-right" />
-        <div className="absolute right-0 top-0 w-1/6 h-full bg-brand-gold opacity-30 skew-x-[-8deg] origin-top-right translate-x-4" />
+        {/* Animated diagonal accents */}
+        <div className="absolute right-0 top-0 w-1/3 h-full bg-brand-red opacity-20 skew-x-[-8deg] origin-top-right animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'both' }} />
+        <div className="absolute right-0 top-0 w-1/6 h-full bg-brand-gold opacity-30 skew-x-[-8deg] origin-top-right translate-x-4 animate-fade-in" style={{ animationDelay: '0.5s', animationFillMode: 'both' }} />
 
-        {/* Background image (replace with AI-generated image) */}
-        <div className="absolute inset-0 opacity-15 bg-[url('/images/hero-tiles-bg.jpg')] bg-cover bg-center" />
+        {/* Floating particles */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {[
+            { size: 6, top: '15%', left: '8%', delay: '0s',   dur: '4s'  },
+            { size: 4, top: '60%', left: '5%', delay: '1s',   dur: '6s'  },
+            { size: 8, top: '30%', left: '45%',delay: '2s',   dur: '5s'  },
+            { size: 5, top: '75%', left: '35%',delay: '0.5s', dur: '7s'  },
+            { size: 3, top: '20%', left: '70%',delay: '1.5s', dur: '4.5s'},
+            { size: 7, top: '85%', left: '80%',delay: '3s',   dur: '6.5s'},
+          ].map((p, i) => (
+            <div
+              key={i}
+              className="absolute rounded-full bg-brand-gold/20"
+              style={{
+                width: p.size, height: p.size,
+                top: p.top, left: p.left,
+                animation: `float ${p.dur} ease-in-out ${p.delay} infinite`,
+              }}
+            />
+          ))}
+        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-24 grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left: copy */}
+          {/* Left: copy with staggered reveal */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-brand-red/20 border border-brand-red/30 text-brand-gold-light px-4 py-1.5 rounded-full text-xs font-700 font-condensed uppercase tracking-widest mb-6">
-              Kerala & Tamil Nadu
+            <div
+              className="inline-flex items-center gap-2 bg-brand-red/20 border border-brand-red/30 text-brand-gold-light px-4 py-1.5 rounded-full text-xs font-700 font-condensed uppercase tracking-widest mb-6 animate-slide-up"
+              style={{ animationDelay: '0.1s', animationFillMode: 'both' }}
+            >
+              Kerala &amp; Tamil Nadu
             </div>
-            <h1 className="text-white font-condensed font-800 text-5xl md:text-6xl lg:text-7xl leading-none mb-6">
-              Superior
-              <span className="text-brand-gold block">Construction</span>
-              Chemical Solutions
+            <h1 className="text-white font-condensed font-800 text-5xl md:text-6xl lg:text-7xl leading-none mb-6 overflow-hidden">
+              <span className="block animate-slide-up" style={{ animationDelay: '0.25s', animationFillMode: 'both' }}>Superior</span>
+              <span className="text-gradient block animate-slide-up" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>Construction</span>
+              <span className="block animate-slide-up" style={{ animationDelay: '0.55s', animationFillMode: 'both' }}>Chemical Solutions</span>
             </h1>
-            <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-lg">
-              Premium tile adhesives, block mortar, grout, and waterproofing products engineered for Kerala's monsoon climate and Tamil Nadu's diverse conditions.
+            <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-lg animate-slide-up" style={{ animationDelay: '0.7s', animationFillMode: 'both' }}>
+              Premium tile adhesives, block mortar, grout, and waterproofing products engineered for Kerala&apos;s monsoon climate and Tamil Nadu&apos;s diverse conditions.
             </p>
-            <div className="flex flex-wrap gap-4 mb-10">
+            <div className="flex flex-wrap gap-4 mb-10 animate-slide-up" style={{ animationDelay: '0.85s', animationFillMode: 'both' }}>
               <Link href="/products" className="btn-primary">
                 Explore Products <ArrowRight size={16} />
               </Link>
@@ -112,11 +135,11 @@ export default function HomePage() {
               </Link>
             </div>
             {/* Trust badges */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-4 animate-slide-up" style={{ animationDelay: '1s', animationFillMode: 'both' }}>
               {[
                 { value: '6+', label: 'Premium Products' },
                 { value: 'ISO', label: 'Quality Assured' },
-                { value: '2', label: 'States Served' },
+                { value: '2',  label: 'States Served' },
               ].map((b) => (
                 <div key={b.label} className="text-center">
                   <div className="text-brand-gold font-condensed font-800 text-2xl">{b.value}</div>
@@ -126,14 +149,15 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right: all 6 products in a 2×3 grid */}
+          {/* Right: all 6 products — staggered float-in */}
           <div className="hidden lg:block">
             <div className="grid grid-cols-2 gap-3">
-              {products.map((p) => (
+              {products.map((p, i) => (
                 <Link
                   key={p.slug}
                   href={`/products/${p.slug}`}
-                  className="card overflow-hidden group hover:-translate-y-1 hover:shadow-2xl transition-all duration-200"
+                  className="card overflow-hidden group animate-slide-right"
+                  style={{ animationDelay: `${0.3 + i * 0.1}s`, animationFillMode: 'both' }}
                 >
                   {/* Bag image */}
                   <div className="bg-brand-dark h-32 flex items-center justify-center relative overflow-hidden">
@@ -143,16 +167,18 @@ export default function HomePage() {
                       code={p.code}
                       badge={p.badge}
                       size="sm"
-                      className="group-hover:scale-105 transition-transform duration-300"
+                      className="group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute top-2 right-2">
                       <span className="badge badge-gold text-[10px]">{p.code}</span>
                     </div>
+                    {/* Hover shine overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   {/* Info */}
                   <div className="p-3 flex items-start justify-between gap-2">
                     <div>
-                      <div className="font-condensed font-700 text-brand-dark text-sm leading-tight">{p.name}</div>
+                      <div className="font-condensed font-700 text-brand-dark text-sm leading-tight group-hover:text-brand-red transition-colors">{p.name}</div>
                       <div className="text-[11px] text-brand-mid-gray mt-0.5">{p.category}</div>
                     </div>
                     <span className="badge badge-red text-[10px] shrink-0 mt-0.5">{p.badge}</span>
@@ -164,7 +190,7 @@ export default function HomePage() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400 text-xs">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400 text-xs animate-fade-in" style={{ animationDelay: '1.5s', animationFillMode: 'both' }}>
           <span className="uppercase tracking-widest">Scroll</span>
           <div className="w-0.5 h-8 bg-brand-gold/50 animate-pulse" />
         </div>
@@ -175,46 +201,47 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════════════ */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
+          <AnimateOnScroll variant="fadeUp" className="text-center mb-12">
             <p className="section-label mb-2">Our Product Range</p>
             <h2 className="section-title text-4xl md:text-5xl text-brand-dark mb-4">
               Professional Grade Solutions
             </h2>
             <p className="text-brand-mid-gray max-w-2xl mx-auto">
-              From tile adhesives to waterproofing membranes — every product engineered for Kerala and Tamil Nadu's construction demands.
+              From tile adhesives to waterproofing membranes — every product engineered for Kerala and Tamil Nadu&apos;s construction demands.
             </p>
-          </div>
+          </AnimateOnScroll>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map((product) => (
-              <Link
-                key={product.slug}
-                href={`/products/${product.slug}`}
-                className={`card group p-6 border ${categoryBg[product.category] || 'bg-gray-50 border-gray-100'} hover:border-brand-red transition-all`}
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <p className="text-xs font-700 font-condensed uppercase tracking-widest text-brand-mid-gray mb-1">{product.category}</p>
-                    <h3 className="font-condensed font-700 text-xl text-brand-dark leading-tight group-hover:text-brand-red transition-colors">{product.name}</h3>
+            {products.map((product, i) => (
+              <AnimateOnScroll key={product.slug} variant="fadeUp" delay={i * 80}>
+                <Link
+                  href={`/products/${product.slug}`}
+                  className={`card group p-6 border h-full block ${categoryBg[product.category] || 'bg-gray-50 border-gray-100'} hover:border-brand-red transition-all`}
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <p className="text-xs font-700 font-condensed uppercase tracking-widest text-brand-mid-gray mb-1">{product.category}</p>
+                      <h3 className="font-condensed font-700 text-xl text-brand-dark leading-tight group-hover:text-brand-red transition-colors">{product.name}</h3>
+                    </div>
+                    <span className="badge badge-red">{product.badge}</span>
                   </div>
-                  <span className="badge badge-red">{product.badge}</span>
-                </div>
-                <p className="text-sm text-brand-mid-gray leading-relaxed mb-4">{product.description.slice(0, 100)}…</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-brand-mid-gray">{product.packSize}</span>
-                  <span className="flex items-center gap-1 text-brand-red font-condensed font-700 text-sm group-hover:gap-2 transition-all">
-                    View Product <ChevronRight size={14} />
-                  </span>
-                </div>
-              </Link>
+                  <p className="text-sm text-brand-mid-gray leading-relaxed mb-4">{product.description.slice(0, 100)}…</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-brand-mid-gray">{product.packSize}</span>
+                    <span className="flex items-center gap-1 text-brand-red font-condensed font-700 text-sm group-hover:gap-2 transition-all">
+                      View Product <ChevronRight size={14} />
+                    </span>
+                  </div>
+                </Link>
+              </AnimateOnScroll>
             ))}
           </div>
 
-          <div className="text-center mt-10">
+          <AnimateOnScroll variant="fadeUp" delay={200} className="text-center mt-10">
             <Link href="/products" className="btn-secondary">
               View All Products <ArrowRight size={16} />
             </Link>
-          </div>
+          </AnimateOnScroll>
         </div>
       </section>
 
@@ -223,22 +250,22 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════════════ */}
       <section className="py-20 bg-brand-dark text-white">
         <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
-          <div>
+          <AnimateOnScroll variant="fadeLeft">
             <p className="section-label text-brand-gold mb-2">Why Choose Us</p>
             <h2 className="font-condensed font-800 text-4xl md:text-5xl text-white leading-tight mb-6">
-              Built for Kerala & Tamil Nadu
+              Built for Kerala &amp; Tamil Nadu
             </h2>
             <p className="text-gray-300 leading-relaxed mb-8">
-              Paver Chemco products are specifically formulated for South India's climate — handling Kerala's intense monsoon, Tamil Nadu's heat, and the unique challenges of modern lightweight construction.
+              Paver Chemco products are specifically formulated for South India&apos;s climate — handling Kerala&apos;s intense monsoon, Tamil Nadu&apos;s heat, and the unique challenges of modern lightweight construction.
             </p>
             <div className="space-y-4">
               {[
-                { title: 'Monsoon Ready', desc: 'Products tested for Kerala\'s 3,000+ mm annual rainfall and high humidity' },
-                { title: 'Heat Tolerant', desc: 'Engineered for Tamil Nadu\'s 40°C+ summer temperatures' },
+                { title: 'Monsoon Ready', desc: "Products tested for Kerala's 3,000+ mm annual rainfall and high humidity" },
+                { title: 'Heat Tolerant', desc: "Engineered for Tamil Nadu's 40°C+ summer temperatures" },
                 { title: 'AAC Block Compatible', desc: 'Specialised mortar for modern lightweight block construction' },
                 { title: 'Kerala & Tamil Nadu Distribution', desc: 'Wide dealer network across both states for fast availability' },
-              ].map((item) => (
-                <div key={item.title} className="flex gap-4">
+              ].map((item, i) => (
+                <div key={item.title} className="flex gap-4 animate-slide-up" style={{ animationDelay: `${i * 0.1}s`, animationFillMode: 'both' }}>
                   <CheckCircle2 className="text-brand-gold mt-0.5 shrink-0" size={18} />
                   <div>
                     <div className="font-600 text-white text-sm">{item.title}</div>
@@ -252,23 +279,25 @@ export default function HomePage() {
                 About Paver Chemco <ArrowRight size={16} />
               </Link>
             </div>
-          </div>
+          </AnimateOnScroll>
 
           {/* Stats grid */}
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              { value: '6', label: 'Product Categories', sub: 'Adhesive, Mortar, Grout, WP' },
-              { value: 'C1T/C1TE', label: 'Tile Adhesive Grade', sub: 'Interior & Exterior' },
-              { value: '≥0.8', label: 'N/mm² Bond Strength', sub: 'Block Jointing Mortar' },
-              { value: '2', label: 'States Covered', sub: 'Kerala & Tamil Nadu' },
-            ].map((stat) => (
-              <div key={stat.label} className="bg-white/5 border border-white/10 rounded-lg p-5">
-                <div className="font-condensed font-800 text-3xl text-brand-gold mb-1">{stat.value}</div>
-                <div className="font-600 text-white text-sm">{stat.label}</div>
-                <div className="text-gray-400 text-xs mt-1">{stat.sub}</div>
-              </div>
-            ))}
-          </div>
+          <AnimateOnScroll variant="fadeRight" delay={150}>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { value: '6', label: 'Product Categories', sub: 'Adhesive, Mortar, Grout, WP' },
+                { value: 'C1T/C1TE', label: 'Tile Adhesive Grade', sub: 'Interior & Exterior' },
+                { value: '≥0.8', label: 'N/mm² Bond Strength', sub: 'Block Jointing Mortar' },
+                { value: '2', label: 'States Covered', sub: 'Kerala & Tamil Nadu' },
+              ].map((stat, i) => (
+                <div key={stat.label} className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 hover:border-brand-gold/30 transition-all duration-300 group">
+                  <div className="font-condensed font-800 text-3xl text-brand-gold mb-1 group-hover:scale-110 transition-transform origin-left">{stat.value}</div>
+                  <div className="font-600 text-white text-sm">{stat.label}</div>
+                  <div className="text-gray-400 text-xs mt-1">{stat.sub}</div>
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
         </div>
       </section>
 
@@ -287,16 +316,17 @@ export default function HomePage() {
               { label: 'Exterior & Terrace', icon: '🌧️', href: '/solutions#exterior', desc: 'Weather resistant systems' },
               { label: 'AAC Block Walls', icon: '🧱', href: '/solutions#block-walls', desc: 'Lightweight block jointing' },
               { label: 'Waterproofing', icon: '💧', href: '/solutions#waterproofing', desc: 'Terrace, bath, basement' },
-            ].map((s) => (
-              <Link
-                key={s.label}
-                href={s.href}
-                className="bg-white rounded-lg p-5 text-center hover:border-brand-red border border-transparent hover:shadow-md transition-all group"
-              >
-                <div className="text-4xl mb-3">{s.icon}</div>
-                <div className="font-condensed font-700 text-brand-dark group-hover:text-brand-red transition-colors text-base">{s.label}</div>
-                <div className="text-xs text-brand-mid-gray mt-1">{s.desc}</div>
-              </Link>
+            ].map((s, i) => (
+              <AnimateOnScroll key={s.label} variant="scaleIn" delay={i * 80}>
+                <Link
+                  href={s.href}
+                  className="bg-white rounded-lg p-5 text-center hover:border-brand-red border border-transparent hover:shadow-lg transition-all group block"
+                >
+                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">{s.icon}</div>
+                  <div className="font-condensed font-700 text-brand-dark group-hover:text-brand-red transition-colors text-base">{s.label}</div>
+                  <div className="text-xs text-brand-mid-gray mt-1">{s.desc}</div>
+                </Link>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>
