@@ -90,11 +90,11 @@ export default function HomePage() {
         {/* Giant logo watermark */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
           <Image
-            src="/images/logo-red.png"
+            src="/images/logo-transparent.png"
             alt=""
             width={600}
             height={600}
-            className="w-[520px] opacity-[0.04] select-none"
+            className="w-[560px] opacity-[0.06] select-none"
             aria-hidden="true"
           />
         </div>
@@ -126,13 +126,13 @@ export default function HomePage() {
           <div>
             {/* Prominent logo */}
             <div className="animate-slide-up mb-6" style={{ animationDelay: '0s', animationFillMode: 'both' }}>
-              <div className="inline-block bg-white rounded-xl px-6 py-4 shadow-2xl mb-3">
+              <div className="mb-3">
                 <Image
-                  src="/images/logo-red.png"
+                  src="/images/logo-transparent.png"
                   alt="Paver Chemco"
-                  width={260}
-                  height={80}
-                  className="h-16 w-auto object-contain"
+                  width={280}
+                  height={90}
+                  className="h-20 w-auto object-contain drop-shadow-2xl"
                   priority
                 />
               </div>
