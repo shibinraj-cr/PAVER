@@ -130,9 +130,9 @@ export default function HomePage() {
                 <Image
                   src="/images/logo-transparent.png"
                   alt="Paver Chemco"
-                  width={280}
-                  height={90}
-                  className="h-20 w-auto object-contain drop-shadow-2xl"
+                  width={840}
+                  height={270}
+                  className="h-60 w-auto object-contain drop-shadow-2xl"
                   priority
                 />
               </div>
