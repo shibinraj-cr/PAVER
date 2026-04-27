@@ -32,7 +32,7 @@ export default function CustomCursor() {
     const animate = () => {
       if (trowelRef.current) {
         trowelRef.current.style.transform =
-          `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`
+          `translate(${mouseX}px, ${mouseY}px) translate(-12%, -12%)`
       }
       ringX += (mouseX - ringX) * 0.1
       ringY += (mouseY - ringY) * 0.1
@@ -92,7 +92,7 @@ export default function CustomCursor() {
           style={{
             width: hovering ? 44 : 38,
             height: hovering ? 44 : 38,
-            transform: `rotate(-45deg) scale(${clicking ? 0.82 : 1})`,
+            transform: `scale(${clicking ? 0.82 : 1})`,
             transition: 'transform 0.12s ease, width 0.15s ease, height 0.15s ease',
             filter: hovering
               ? 'drop-shadow(0 0 6px rgba(232,160,32,0.8))'
