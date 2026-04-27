@@ -87,6 +87,18 @@ export default function HomePage() {
         <div className="absolute right-0 top-0 w-1/3 h-full bg-brand-red opacity-20 skew-x-[-8deg] origin-top-right animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'both' }} />
         <div className="absolute right-0 top-0 w-1/6 h-full bg-brand-gold opacity-30 skew-x-[-8deg] origin-top-right translate-x-4 animate-fade-in" style={{ animationDelay: '0.5s', animationFillMode: 'both' }} />
 
+        {/* Giant logo watermark */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+          <Image
+            src="/images/logo-red.png"
+            alt=""
+            width={600}
+            height={600}
+            className="w-[520px] opacity-[0.04] select-none"
+            aria-hidden="true"
+          />
+        </div>
+
         {/* Floating particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[
@@ -112,9 +124,31 @@ export default function HomePage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-24 grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: copy with staggered reveal */}
           <div>
+            {/* Prominent logo */}
+            <div className="animate-slide-up mb-6" style={{ animationDelay: '0s', animationFillMode: 'both' }}>
+              <div className="inline-block bg-white rounded-xl px-6 py-4 shadow-2xl mb-3">
+                <Image
+                  src="/images/logo-red.png"
+                  alt="Paver Chemco"
+                  width={260}
+                  height={80}
+                  className="h-16 w-auto object-contain"
+                  priority
+                />
+              </div>
+              <div className="flex items-center gap-3 mt-2">
+                <div className="h-px flex-1 bg-brand-gold/30" />
+                <span className="text-brand-gold text-xs font-condensed font-700 uppercase tracking-widest">
+                  by Furner RefraCeram
+                </span>
+                <div className="h-px flex-1 bg-brand-gold/30" />
+              </div>
+            </div>
+
+            {/* Region pill */}
             <div
               className="inline-flex items-center gap-2 bg-brand-red/20 border border-brand-red/30 text-brand-gold-light px-4 py-1.5 rounded-full text-xs font-700 font-condensed uppercase tracking-widest mb-6 animate-slide-up"
-              style={{ animationDelay: '0.1s', animationFillMode: 'both' }}
+              style={{ animationDelay: '0.15s', animationFillMode: 'both' }}
             >
               Kerala &amp; Tamil Nadu
             </div>
