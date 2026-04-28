@@ -6,8 +6,8 @@ import { siteConfig } from '@/data/siteConfig'
 import ProductBagImage from '@/components/ui/ProductBagImage'
 
 export const metadata: Metadata = {
-  title: 'Construction Chemical Products Kerala & Tamil Nadu | Paver Chemco',
-  description: 'Browse Paver Chemco\'s full range — tile adhesive (C1T, C1TE), block jointing mortar, tile grout, epoxy grout, and waterproofing membrane. Available across Kerala and Tamil Nadu.',
+  title: 'Construction Chemical Products for Tropical Climates | Paver Chemco',
+  description: 'Browse Paver Chemco\'s full range — tile adhesive (C1T, C1TE), block jointing mortar, tile grout, epoxy grout, and waterproofing membrane. Engineered for tropical monsoon climates.',
   alternates: { canonical: `${siteConfig.url}/products` },
 }
 
@@ -19,7 +19,7 @@ export default function ProductsPage() {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="section-label text-brand-gold mb-3">Complete Range</p>
           <h1 className="font-condensed font-800 text-5xl md:text-6xl text-white mb-4">Our Products</h1>
-          <p className="text-gray-300 max-w-2xl mx-auto">Premium construction chemicals for tile fixing, block laying, grouting, and waterproofing — distributed across Kerala and Tamil Nadu.</p>
+          <p className="text-gray-300 max-w-2xl mx-auto">Premium construction chemicals for tile fixing, block laying, grouting, and waterproofing — engineered for tropical monsoon climates and high-humidity environments.</p>
         </div>
       </section>
 

@@ -25,21 +25,21 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'how-to-choose-tile-adhesive-kerala',
-    title: 'How to Choose the Right Tile Adhesive for Your Home in Kerala',
-    excerpt: 'Confused between cement-sand mortar and tile adhesive? Learn why polymer-modified tile adhesive is the smarter choice for Kerala homes — especially in monsoon conditions.',
+    title: 'How to Choose the Right Tile Adhesive for Your Home in tropical monsoon regions',
+    excerpt: 'Confused between cement-sand mortar and tile adhesive? Learn why polymer-modified tile adhesive is the smarter choice for tropical monsoon climates homes — especially in monsoon conditions.',
     author: 'Paver Chemco Technical Team',
     date: '2025-05-01',
     readTime: '6 min read',
     category: 'Tile Adhesive',
-    tags: ['tile adhesive', 'Kerala', 'home renovation', 'C1T', 'C1TE'],
+    tags: ['tile adhesive', 'tropical monsoon regions', 'home renovation', 'C1T', 'C1TE'],
     image: '/images/blog/tile-adhesive-guide-kerala.jpg',
     featured: true,
     content: `
-<h2>Why Your Choice of Tile Adhesive Matters in Kerala</h2>
-<p>Kerala's climate — high humidity, monsoon rains, and temperature variations — puts unique demands on construction materials. The tile adhesive you choose directly affects how long your tiles stay bonded, how water-resistant your walls and floors are, and how much maintenance you'll need down the line.</p>
+<h2>Why Your Choice of Tile Adhesive Matters in tropical monsoon regions</h2>
+<p>tropical monsoon regions's climate — high humidity, monsoon rains, and temperature variations — puts unique demands on construction materials. The tile adhesive you choose directly affects how long your tiles stay bonded, how water-resistant your walls and floors are, and how much maintenance you'll need down the line.</p>
 
 <h2>Cement-Sand Mortar vs Polymer-Modified Tile Adhesive</h2>
-<p>Traditionally, Kerala masons have used a cement-sand mix (1:4 ratio) to lay tiles. While this method is familiar, it has significant drawbacks — especially in modern construction with lightweight blocks and vitrified tiles.</p>
+<p>Traditionally, tropical monsoon regions masons have used a cement-sand mix (1:4 ratio) to lay tiles. While this method is familiar, it has significant drawbacks — especially in modern construction with lightweight blocks and vitrified tiles.</p>
 
 <h3>Problems with conventional cement mortar:</h3>
 <ul>
@@ -69,31 +69,31 @@ export const blogPosts: BlogPost[] = [
 <h2>How Much Tile Adhesive Do You Need?</h2>
 <p>Both C1T and C1TE cover approximately 4–4.5 kg per sqm at 3 mm bed thickness. For a 200 sqm home, you would need approximately 25–30 bags of 30 kg each. Use our <a href="/tools">Coverage Calculator</a> for an exact estimate.</p>
 
-<h2>Where to Buy Paver Chemco Tile Adhesive in Kerala</h2>
-<p>Paver Chemco products are distributed across Kerala — from Thiruvananthapuram to Kasaragod. Contact us at <strong>business@furner.in</strong> or call <strong>+91 9994491827</strong> to find your nearest dealer.</p>
+<h2>Where to Buy Paver Chemco Tile Adhesive in tropical monsoon regions</h2>
+<p>Paver Chemco products are distributed across tropical monsoon regions — from the region to Kasaragod. Contact us at <strong>business@furner.in</strong> or call <strong>+91 9994491827</strong> to find your nearest dealer.</p>
     `,
     seo: {
-      title: 'Best Tile Adhesive for Kerala Homes | C1T vs C1TE Comparison Guide',
-      description: 'Learn how to choose the right tile adhesive for your Kerala home. C1T for interiors, C1TE for exteriors and tile-on-tile. Expert guide by Paver Chemco.',
-      keywords: ['tile adhesive Kerala', 'best tile adhesive Kerala', 'C1T C1TE comparison', 'tile adhesive vs cement Kerala', 'tile adhesive guide Kerala'],
+      title: 'Best Tile Adhesive for tropical monsoon climates Homes | C1T vs C1TE Comparison Guide',
+      description: 'Learn how to choose the right tile adhesive for your tropical monsoon regions home. C1T for interiors, C1TE for exteriors and tile-on-tile. Expert guide by Paver Chemco.',
+      keywords: ['tile adhesive tropical monsoon regions', 'best tile adhesive tropical monsoon regions', 'C1T C1TE comparison', 'tile adhesive vs cement tropical monsoon regions', 'tile adhesive guide tropical monsoon regions'],
     },
   },
   {
     slug: 'terrace-waterproofing-kerala-monsoon-guide',
-    title: 'Terrace Waterproofing Before Kerala Monsoon: Complete Step-by-Step Guide',
-    excerpt: 'Protect your home from Kerala\'s intense monsoon with proper terrace waterproofing. Step-by-step guide using Paver Chemco WP Membrane.',
+    title: 'Terrace Waterproofing Before tropical monsoon regions Monsoon: Complete Step-by-Step Guide',
+    excerpt: 'Protect your home from tropical monsoon regions\'s intense monsoon with proper terrace waterproofing. Step-by-step guide using Paver Chemco WP Membrane.',
     author: 'Paver Chemco Technical Team',
     date: '2025-05-15',
     readTime: '8 min read',
     category: 'Waterproofing',
-    tags: ['waterproofing', 'terrace', 'Kerala monsoon', 'WP Membrane'],
+    tags: ['waterproofing', 'terrace', 'monsoon season', 'WP Membrane'],
     image: '/images/blog/terrace-waterproofing-kerala.jpg',
     featured: true,
     content: `
-<h2>Why Terrace Waterproofing is Critical in Kerala</h2>
-<p>Kerala receives one of the highest annual rainfalls in India — averaging 3,000 mm per year, with June-September bringing intense south-west monsoon rains. A leaking terrace in Kerala is not just an inconvenience — it can cause structural damage, mould growth, and expensive repairs.</p>
+<h2>Why Terrace Waterproofing is Critical in tropical monsoon regions</h2>
+<p>tropical monsoon regions receives one of the highest annual rainfalls in India — averaging 3,000 mm per year, with June-September bringing intense south-west monsoon rains. A leaking terrace in tropical monsoon regions is not just an inconvenience — it can cause structural damage, mould growth, and expensive repairs.</p>
 
-<h2>Common Causes of Terrace Leakage in Kerala Homes</h2>
+<h2>Common Causes of Terrace Leakage in tropical monsoon regions Homes</h2>
 <ul>
 <li>Hairline cracks in the concrete slab that widen during thermal cycling</li>
 <li>Failed or aged waterproofing coating from original construction</li>
@@ -102,7 +102,7 @@ export const blogPosts: BlogPost[] = [
 <li>Gaps at parapet wall junctions</li>
 </ul>
 
-<h2>Best Time to Waterproof Your Terrace in Kerala</h2>
+<h2>Best Time to Waterproof Your Terrace in tropical monsoon regions</h2>
 <p>The ideal time is <strong>March–May</strong> (pre-monsoon), when the weather is dry and hot. This allows for proper curing of the waterproofing membrane before the rains arrive. Avoid waterproofing during the monsoon season itself — rain within 4–6 hours of application can wash off uncured coating.</p>
 
 <h2>Step-by-Step Terrace Waterproofing with Paver Chemco WP Membrane</h2>
@@ -138,28 +138,28 @@ export const blogPosts: BlogPost[] = [
 <p>After 7 days, seal the drain outlets and fill the terrace to 50 mm depth. Leave for 48 hours and check the ceiling below for any damp patches.</p>
 
 <h2>How Much WP Membrane Do You Need?</h2>
-<p>For a typical Kerala home terrace of 100 sqm: 2 coats at 1.2 kg/m² = approximately 240 kg = 12 bags of 20 kg each.</p>
+<p>For a typical tropical monsoon regions home terrace of 100 sqm: 2 coats at 1.2 kg/m² = approximately 240 kg = 12 bags of 20 kg each.</p>
     `,
     seo: {
-      title: 'Terrace Waterproofing Guide for Kerala Monsoon | Paver Chemco',
-      description: 'Step-by-step terrace waterproofing guide for Kerala homes before monsoon. Use Paver Chemco WP Membrane for crack-bridging, durable protection.',
-      keywords: ['terrace waterproofing Kerala', 'waterproofing before monsoon Kerala', 'terrace leakage repair Kerala', 'waterproofing chemical Kerala', 'terrace waterproofing guide'],
+      title: 'Terrace Waterproofing Guide for tropical monsoon climates Monsoon | Paver Chemco',
+      description: 'Step-by-step terrace waterproofing guide for tropical monsoon climates homes before monsoon. Use Paver Chemco WP Membrane for crack-bridging, durable protection.',
+      keywords: ['terrace waterproofing tropical monsoon regions', 'waterproofing before monsoon tropical monsoon regions', 'terrace leakage repair tropical monsoon regions', 'waterproofing chemical tropical monsoon regions', 'terrace waterproofing guide'],
     },
   },
   {
     slug: 'aac-block-construction-guide-tamil-nadu',
-    title: 'Complete Guide to AAC Block Construction in Tamil Nadu',
-    excerpt: 'AAC blocks are revolutionising construction in Tamil Nadu. Learn the right way to lay AAC blocks with the correct block jointing mortar for strong, crack-free walls.',
+    title: 'Complete Guide to AAC Block Construction in tropical climates',
+    excerpt: 'AAC blocks are revolutionising construction in tropical climates. Learn the right way to lay AAC blocks with the correct block jointing mortar for strong, crack-free walls.',
     author: 'Paver Chemco Technical Team',
     date: '2025-05-20',
     readTime: '7 min read',
     category: 'Block Mortar',
-    tags: ['AAC blocks', 'Tamil Nadu', 'block mortar', 'construction guide'],
+    tags: ['AAC blocks', 'tropical climates', 'block mortar', 'construction guide'],
     image: '/images/blog/aac-block-tamil-nadu.jpg',
     featured: false,
     content: `
-<h2>Why AAC Blocks are Popular in Tamil Nadu</h2>
-<p>Autoclaved Aerated Concrete (AAC) blocks have rapidly gained popularity in Tamil Nadu due to their light weight, thermal insulation properties, and earthquake resistance. Cities like Chennai, Coimbatore, Madurai, and Salem have seen a surge in AAC block construction over the past decade.</p>
+<h2>Why AAC Blocks are Popular in tropical climates</h2>
+<p>Autoclaved Aerated Concrete (AAC) blocks have rapidly gained popularity in tropical climates due to their light weight, thermal insulation properties, and earthquake resistance. Cities like the region, the region, the region, and the region have seen a surge in AAC block construction over the past decade.</p>
 
 <h2>The Problem with Using Regular Cement Mortar for AAC Blocks</h2>
 <p>Many contractors still use conventional 1:6 cement-sand mortar for AAC block laying — with joints of 12–15 mm thickness. This is incorrect and leads to several problems:</p>
@@ -182,24 +182,24 @@ export const blogPosts: BlogPost[] = [
 <li>Coverage: 4–5 kg per sqm of wall area</li>
 </ul>
 
-<h2>Where to Buy Block Jointing Mortar in Tamil Nadu</h2>
-<p>Paver Chemco Block Jointing Mortar is available through our Tamil Nadu dealer network. Call us at +91 9994491827 or email business@furner.in to find a dealer near you in Chennai, Coimbatore, Madurai, Trichy, Salem, or Tirunelveli.</p>
+<h2>Where to Buy Block Jointing Mortar in tropical climates</h2>
+<p>Paver Chemco Block Jointing Mortar is available through our tropical climates dealer network. Call us at +91 9994491827 or email business@furner.in to find a dealer near you in the region, the region, the region, the region, the region, or the region.</p>
     `,
     seo: {
-      title: 'AAC Block Construction Guide Tamil Nadu | Block Jointing Mortar',
-      description: 'How to lay AAC blocks correctly in Tamil Nadu. Use Paver Chemco Block Jointing Mortar for 3 mm joints, >10 MPa strength. Available across Tamil Nadu.',
-      keywords: ['AAC block construction Tamil Nadu', 'block jointing mortar Tamil Nadu', 'AAC block mortar Chennai', 'fly ash brick mortar Tamil Nadu', 'AAC block guide India'],
+      title: 'AAC Block Construction Guide tropical climates | Block Jointing Mortar',
+      description: 'How to lay AAC blocks correctly in tropical climates. Use Paver Chemco Block Jointing Mortar for 3 mm joints, >10 MPa strength. Available across tropical climates.',
+      keywords: ['AAC block construction tropical climates', 'block jointing mortar tropical climates', 'AAC block mortar the region', 'fly ash brick mortar tropical climates', 'AAC block guide India'],
     },
   },
   {
     slug: 'epoxy-grout-vs-cement-grout',
     title: 'Epoxy Grout vs Cement Grout: Which Is Better for Your Tiles?',
-    excerpt: 'Epoxy grout vs cement grout — a detailed comparison for homeowners and contractors in Kerala and Tamil Nadu. When to use which, costs, and applications.',
+    excerpt: 'Epoxy grout vs cement grout — a detailed comparison for homeowners and contractors in tropical monsoon regions. When to use which, costs, and applications.',
     author: 'Paver Chemco Technical Team',
     date: '2025-06-01',
     readTime: '5 min read',
     category: 'Grout',
-    tags: ['epoxy grout', 'cement grout', 'comparison', 'Kerala', 'Tamil Nadu'],
+    tags: ['epoxy grout', 'cement grout', 'comparison', 'tropical monsoon regions', 'tropical climates'],
     image: '/images/blog/epoxy-vs-cement-grout.jpg',
     featured: false,
     content: `
@@ -231,9 +231,9 @@ export const blogPosts: BlogPost[] = [
 <p>Use <strong>Paver Chemco Tile Grout</strong> for standard residential and commercial tiling. Use <strong>Paver Chemco Epoxy Grout</strong> for swimming pools, commercial kitchens, hospitals, and any area requiring chemical or stain resistance.</p>
     `,
     seo: {
-      title: 'Epoxy Grout vs Cement Grout Kerala & Tamil Nadu | Which to Choose?',
-      description: 'Complete comparison of epoxy grout vs cement grout for Kerala and Tamil Nadu applications. When to choose Paver Chemco Tile Grout vs Epoxy Grout.',
-      keywords: ['epoxy grout vs cement grout', 'best grout for tiles Kerala', 'epoxy grout Tamil Nadu', 'tile grout comparison India', 'epoxy grout swimming pool Kerala'],
+      title: 'Epoxy Grout vs Cement Grout tropical monsoon regions | Which to Choose?',
+      description: 'Complete comparison of epoxy grout vs cement grout for tropical monsoon regions applications. When to choose Paver Chemco Tile Grout vs Epoxy Grout.',
+      keywords: ['epoxy grout vs cement grout', 'best grout for tiles tropical monsoon regions', 'epoxy grout tropical climates', 'tile grout comparison India', 'epoxy grout swimming pool tropical monsoon regions'],
     },
   },
 ]

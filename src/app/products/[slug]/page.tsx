@@ -56,7 +56,7 @@ export default function ProductPage({ params }: Props) {
           priceCurrency: 'INR',
           availability: 'https://schema.org/InStock',
           seller: { '@type': 'Organization', name: siteConfig.company },
-          areaServed: ['Kerala', 'Tamil Nadu'],
+          areaServed: ['Tropical Monsoon Regions'],
         },
       },
       {
@@ -275,7 +275,7 @@ export default function ProductPage({ params }: Props) {
         <div className="max-w-4xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h2 className="font-condensed font-800 text-3xl text-white">Need {product.name}?</h2>
-            <p className="text-white/80">Find a dealer near you in Kerala or Tamil Nadu.</p>
+            <p className="text-white/80">Find a dealer near you in your region.</p>
           </div>
           <div className="flex gap-3">
             <Link href="/contact" className="btn-outline-white">Find Dealer</Link>

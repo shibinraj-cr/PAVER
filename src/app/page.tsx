@@ -29,7 +29,7 @@ const homeSchema = {
         '@type': 'ContactPoint',
         telephone: siteConfig.phone,
         contactType: 'sales',
-        areaServed: ['Kerala', 'Tamil Nadu'],
+        areaServed: ['Tropical Monsoon Regions'],
         availableLanguage: ['English', 'Malayalam', 'Tamil'],
       },
     },
@@ -50,8 +50,7 @@ const homeSchema = {
         addressCountry: 'IN',
       },
       areaServed: [
-        { '@type': 'State', name: 'Kerala' },
-        { '@type': 'State', name: 'Tamil Nadu' },
+        { '@type': 'Place', name: 'Tropical Monsoon Regions' },
       ],
     },
   ],

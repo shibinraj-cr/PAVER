@@ -83,7 +83,7 @@ export default function ContactForm() {
         <label className="block text-sm font-600 text-brand-dark mb-1.5">Location (City / State)</label>
         <input
           name="location" type="text" value={formData.location}
-          onChange={handleChange} placeholder="e.g. Kochi, Kerala"
+          onChange={handleChange} placeholder="e.g. City, Region"
           className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-brand-red"
         />
       </div>

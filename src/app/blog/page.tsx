@@ -5,8 +5,8 @@ import { blogPosts } from '@/data/blog'
 import { siteConfig } from '@/data/siteConfig'
 
 export const metadata: Metadata = {
-  title: 'Blog — Tile Adhesive & Construction Guides Kerala Tamil Nadu | Paver Chemco',
-  description: 'Expert guides on tile adhesive, waterproofing, block construction, and grout selection for Kerala and Tamil Nadu homes and commercial projects.',
+  title: 'Blog — Tile Adhesive & Construction Chemical Guides | Paver Chemco',
+  description: 'Expert guides on tile adhesive, waterproofing, block construction, and grout selection for tropical monsoon climates — homes and commercial projects.',
   alternates: { canonical: `${siteConfig.url}/blog` },
 }
 
@@ -17,7 +17,7 @@ export default function BlogPage() {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="section-label text-brand-gold mb-3">Knowledge Centre</p>
           <h1 className="font-condensed font-800 text-5xl text-white mb-4">Blog & Guides</h1>
-          <p className="text-gray-300 max-w-2xl mx-auto">Expert construction tips, product guides, and how-to articles for Kerala and Tamil Nadu.</p>
+          <p className="text-gray-300 max-w-2xl mx-auto">Expert construction tips, product guides, and how-to articles for tropical climates and monsoon-prone environments.</p>
         </div>
       </section>
 

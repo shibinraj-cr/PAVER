@@ -4,8 +4,8 @@ import { siteConfig } from '@/data/siteConfig'
 import ContactForm from './ContactForm'
 
 export const metadata: Metadata = {
-  title: 'Contact & Dealers Kerala Tamil Nadu | Paver Chemco',
-  description: 'Contact Paver Chemco for product enquiries, dealer locations in Kerala and Tamil Nadu, bulk orders, and technical support. Call +91 9994491827.',
+  title: 'Contact Paver Chemco | Enquiries, Dealers & Technical Support',
+  description: 'Contact Paver Chemco for product enquiries, dealer locations, bulk orders, and technical support. Call +91 9994491827.',
   alternates: { canonical: `${siteConfig.url}/contact` },
 }
 
@@ -24,7 +24,7 @@ export default function ContactPage() {
           <p className="section-label text-brand-gold mb-3">Get In Touch</p>
           <h1 className="font-condensed font-800 text-5xl text-white mb-4">Contact Us</h1>
           <p className="text-gray-300 max-w-xl mx-auto">
-            Reach us for product enquiries, dealer information, bulk pricing, or technical advice in Kerala and Tamil Nadu.
+            Reach us for product enquiries, dealer information, bulk pricing, or technical advice on your project.
           </p>
         </div>
       </section>
@@ -52,14 +52,13 @@ export default function ContactPage() {
             </div>
 
             <div className="mt-8">
-              <h3 className="font-condensed font-700 text-xl text-brand-dark mb-3">Distribution Area</h3>
+              <h3 className="font-condensed font-700 text-xl text-brand-dark mb-3">We Serve</h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  'Kerala', 'Tamil Nadu', 'Kochi', 'Thiruvananthapuram', 'Kozhikode',
-                  'Thrissur', 'Palakkad', 'Chennai', 'Coimbatore', 'Madurai',
-                  'Trichy', 'Salem', 'Tirunelveli', 'Malappuram', 'Kannur',
-                ].map((area) => (
-                  <span key={area} className="badge badge-dark text-xs">{area}</span>
+                  'Monsoon Climates', 'High-Humidity Zones', 'Coastal Regions',
+                  'Tropical Interiors', 'Extreme Heat Zones', 'Heavy Rainfall Areas',
+                ].map((zone) => (
+                  <span key={zone} className="badge badge-dark text-xs">{zone}</span>
                 ))}
               </div>
             </div>

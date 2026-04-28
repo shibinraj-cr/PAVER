@@ -6,7 +6,7 @@ import { ChevronRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'FAQ — Tile Adhesive, Waterproofing & Block Mortar Questions | Paver Chemco',
-  description: 'Answers to common questions about tile adhesive, block jointing mortar, waterproofing, and grout in Kerala and Tamil Nadu. Paver Chemco technical FAQ.',
+  description: 'Answers to common questions about tile adhesive, block jointing mortar, waterproofing, and grout for tropical monsoon climates. Paver Chemco technical FAQ.',
   alternates: { canonical: `${siteConfig.url}/faq` },
 }
 
@@ -31,7 +31,7 @@ export default function FAQPage() {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="section-label text-brand-gold mb-3">Got Questions?</p>
           <h1 className="font-condensed font-800 text-5xl text-white mb-4">Frequently Asked Questions</h1>
-          <p className="text-gray-300 max-w-2xl mx-auto">Technical answers for homeowners, contractors, and architects in Kerala and Tamil Nadu.</p>
+          <p className="text-gray-300 max-w-2xl mx-auto">Technical answers for homeowners, contractors, and architects building in tropical monsoon climates.</p>
         </div>
       </section>
 
