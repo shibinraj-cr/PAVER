@@ -4,8 +4,8 @@ import { ArrowRight, CheckCircle2, Building2, MapPin, Award, Users, Zap, HeartHa
 import { siteConfig } from '@/data/siteConfig'
 
 export const metadata: Metadata = {
-  title: 'About Paver Chemco | Construction Chemicals Kerala & Tamil Nadu',
-  description: 'Paver Chemco is a brand by Furner RefraCeram Private Limited, manufacturing premium polymer-modified construction chemicals distributed across Kerala and Tamil Nadu.',
+  title: 'About Paver Chemco | Construction Chemicals for Tropical Climates',
+  description: 'Paver Chemco is a brand by Furner RefraCeram Private Limited, manufacturing premium polymer-modified construction chemicals engineered for tropical monsoon climates and high-humidity environments.',
   alternates: { canonical: `${siteConfig.url}/about` },
 }
 
@@ -18,12 +18,12 @@ const values = [
   {
     icon: Zap,
     title: 'Reliability',
-    desc: 'Contractors and homeowners across Kerala and Tamil Nadu trust Paver Chemco products to perform — batch after batch, project after project.',
+    desc: 'Contractors and homeowners across tropical monsoon regions trust Paver Chemco products to perform — batch after batch, project after project.',
   },
   {
     icon: Users,
     title: 'Accessibility',
-    desc: 'Premium construction chemicals should not be limited to large contractors. Our dealer network ensures Paver Chemco is available across both states at fair prices.',
+    desc: 'Premium construction chemicals should not be limited to large contractors. Our dealer network ensures Paver Chemco is available across the region at fair prices.',
   },
   {
     icon: HeartHandshake,
@@ -43,9 +43,9 @@ export default function AboutPage() {
             About Paver Chemco
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
-            A brand built for the South Indian construction industry — bringing
+            A brand built for demanding tropical construction environments — bringing
             international-grade construction chemicals within reach of every
-            builder, contractor, and homeowner in Kerala and Tamil Nadu.
+            builder, contractor, and homeowner.
           </p>
         </div>
       </section>
@@ -56,24 +56,22 @@ export default function AboutPage() {
           <div>
             <p className="section-label mb-3">Our Story</p>
             <h2 className="section-title text-4xl text-brand-dark mb-6 leading-tight">
-              Built in Kerala,<br />Made for India
+              Engineered for<br />Tropical Climates
             </h2>
             <div className="space-y-4 text-brand-mid-gray leading-relaxed">
               <p>
                 Paver Chemco is a specialist construction chemicals brand by{' '}
                 <strong className="text-brand-dark">Furner RefraCeram Private Limited</strong>, a
-                company incorporated in Kerala and committed to manufacturing
-                polymer-modified construction chemicals that meet the demands of
-                South India's unique climate and construction practices.
+                company committed to manufacturing polymer-modified construction
+                chemicals that meet the demands of tropical climates and modern
+                construction practices.
               </p>
               <p>
-                Founded with a clear purpose — to bring the quality of
-                internationally benchmarked tile adhesives, block jointing
-                mortars, grouts, and waterproofing membranes to Kerala and Tamil
-                Nadu builders, our products are formulated specifically for the
-                challenges our contractors face: Kerala's intense monsoon, Tamil
-                Nadu's summer heat, and the growing adoption of modern
-                lightweight AAC block construction.
+                Founded with a clear purpose — to bring internationally benchmarked
+                tile adhesives, block jointing mortars, grouts, and waterproofing
+                membranes to builders facing real-world challenges: intense monsoon
+                rainfall, year-round high humidity, extreme summer heat, and the
+                growing adoption of modern lightweight AAC block construction.
               </p>
               <p>
                 Our product range covers the full spectrum of construction
@@ -130,15 +128,14 @@ export default function AboutPage() {
           </h2>
           <p className="text-gray-300 text-lg leading-relaxed mb-10">
             Our mission is to make premium polymer-modified construction chemicals
-            accessible to builders, contractors, and homeowners across Kerala and
-            Tamil Nadu — so that every home is built with materials that perform
-            as well as international standards demand, at prices the South Indian
-            market can work with.
+            accessible to builders, contractors, and homeowners across tropical
+            monsoon regions — so that every home is built with materials that perform
+            as well as international standards demand.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               { value: '6+', label: 'Products' },
-              { value: '2', label: 'States' },
+              { value: 'Multi', label: 'Regions' },
               { value: 'ISO', label: 'Quality' },
               { value: '2024', label: 'Founded' },
             ].map((s) => (
@@ -178,18 +175,18 @@ export default function AboutPage() {
           <div>
             <p className="section-label mb-3">Where We Serve</p>
             <h2 className="section-title text-4xl text-brand-dark mb-6">
-              Kerala & Tamil Nadu
+              Tropical Monsoon Regions
             </h2>
             <p className="text-brand-mid-gray leading-relaxed mb-6">
               Paver Chemco products are distributed through an authorised dealer
-              network across both states. Our network covers all major cities and
-              towns — from Thiruvananthapuram to Kasaragod in Kerala, and from
-              Chennai to Tirunelveli in Tamil Nadu.
+              network across the region. Our network ensures fast availability
+              for contractors, builders, and homeowners in high-humidity and
+              monsoon-prone areas.
             </p>
             <div className="space-y-3">
               {[
-                'Kerala — All 14 districts',
-                'Tamil Nadu — Chennai, Coimbatore, Madurai, Trichy, Salem, Tirunelveli, and more',
+                'Wide dealer network across monsoon climate regions',
+                'Suitable for high-humidity coastal and inland zones',
                 'Dealer support and technical advisory',
                 'Bulk and project supply available',
               ].map((item) => (
@@ -202,14 +199,12 @@ export default function AboutPage() {
           </div>
           <div className="flex flex-wrap gap-2">
             {[
-              'Thiruvananthapuram', 'Kochi', 'Kozhikode', 'Thrissur',
-              'Palakkad', 'Malappuram', 'Kannur', 'Kasaragod',
-              'Kollam', 'Pathanamthitta', 'Alappuzha', 'Kottayam',
-              'Idukki', 'Wayanad',
-              'Chennai', 'Coimbatore', 'Madurai', 'Trichy',
-              'Salem', 'Tirunelveli', 'Vellore', 'Erode',
-            ].map((city) => (
-              <span key={city} className="badge badge-dark text-xs">{city}</span>
+              'Monsoon Climates', 'High Humidity Zones', 'Coastal Regions',
+              'Tropical Interiors', 'Extreme Heat Zones', 'Heavy Rainfall Areas',
+              'Humid Coastal Belts', 'Year-Round Wet Climates',
+              'High-Temperature Regions', 'Sub-Tropical Zones',
+            ].map((zone) => (
+              <span key={zone} className="badge badge-dark text-xs">{zone}</span>
             ))}
           </div>
         </div>
@@ -222,7 +217,7 @@ export default function AboutPage() {
             Ready to Work With Us?
           </h2>
           <p className="text-white/85 text-lg mb-8">
-            Contact us for product enquiries, dealer information, or technical advice for your project in Kerala or Tamil Nadu.
+            Contact us for product enquiries, dealer information, or technical advice for your project.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="btn-outline-white">

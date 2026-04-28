@@ -26,7 +26,7 @@ export default function Footer() {
           </div>
           <div className="text-brand-gold text-xs uppercase tracking-widest mb-4">by Furner RefraCeram</div>
           <p className="text-gray-400 text-sm leading-relaxed mb-5">
-            Premium construction chemical solutions for Kerala and Tamil Nadu. Trusted by builders, contractors, and homeowners.
+            Premium construction chemical solutions engineered for tropical monsoon climates. Trusted by builders, contractors, and homeowners.
           </p>
           <div className="flex gap-3">
             {[
@@ -108,12 +108,12 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Service areas */}
+          {/* Climate zones */}
           <div className="mt-5">
-            <div className="text-xs font-700 font-condensed uppercase tracking-widest text-white mb-2">Service Areas</div>
+            <div className="text-xs font-700 font-condensed uppercase tracking-widest text-white mb-2">Suited For</div>
             <div className="flex flex-wrap gap-1.5">
-              {['Kerala', 'Tamil Nadu', 'Kochi', 'Chennai', 'Kozhikode', 'Coimbatore', 'Thrissur', 'Madurai'].map((area) => (
-                <span key={area} className="text-xs px-2 py-0.5 bg-white/10 rounded text-gray-300">{area}</span>
+              {['Monsoon Climates', 'High Humidity', 'Coastal Zones', 'Extreme Heat', 'Tropical Regions'].map((zone) => (
+                <span key={zone} className="text-xs px-2 py-0.5 bg-white/10 rounded text-gray-300">{zone}</span>
               ))}
             </div>
           </div>

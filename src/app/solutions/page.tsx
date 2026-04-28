@@ -4,8 +4,8 @@ import { ArrowRight, ChevronRight } from 'lucide-react'
 import { siteConfig } from '@/data/siteConfig'
 
 export const metadata: Metadata = {
-  title: 'Construction Chemical Solutions Kerala & Tamil Nadu | Paver Chemco',
-  description: 'Find the right Paver Chemco construction chemical solution for your project — tiling, waterproofing, AAC block construction, or exterior applications in Kerala and Tamil Nadu.',
+  title: 'Construction Chemical Solutions for Tropical Climates | Paver Chemco',
+  description: 'Find the right Paver Chemco construction chemical solution for your project — tiling, waterproofing, AAC block construction, or exterior applications in tropical monsoon climates.',
   alternates: { canonical: `${siteConfig.url}/solutions` },
 }
 
@@ -46,7 +46,7 @@ const solutions = [
     problem:
       'You are laying tiles on a terrace, balcony, exterior floor, or outdoor wall — exposed to rain, heat, and UV. Standard cement mortar or interior-grade adhesives fail in these conditions.',
     description:
-      'Exterior applications require enhanced polymer content to handle thermal movement, rain exposure, and the smooth back surface of vitrified tiles. Paver Chemco C1TE is specifically formulated for Kerala monsoon and Tamil Nadu heat conditions. Pair with WP Membrane under tiles for full weather protection on terraces.',
+      'Exterior applications require enhanced polymer content to handle thermal movement, heavy rain exposure, and the smooth back surface of vitrified tiles. Paver Chemco C1TE is specifically formulated for intense monsoon conditions and extreme heat environments. Pair with WP Membrane under tiles for full weather protection on terraces.',
     recommended: [
       {
         code: 'C1TE',
@@ -97,7 +97,7 @@ const solutions = [
       'Joints must be exactly 3 mm — use a notched applicator',
       'Pre-wet AAC block surfaces before applying mortar',
       'Mix only as much as can be used in 90 minutes',
-      'Mist cure in hot Tamil Nadu summer conditions',
+      'Mist cure in hot, dry summer conditions',
     ],
     accentColor: 'border-stone-200 bg-stone-50',
     badgeBg: 'bg-stone-100 text-stone-700',
@@ -108,7 +108,7 @@ const solutions = [
     title: 'Waterproofing',
     subtitle: 'Terrace, bathroom, basement, pool',
     problem:
-      'You have a leaking terrace before Kerala monsoon, a bathroom that needs waterproofing under the tiles, a basement with water ingress, or a swimming pool that needs a long-lasting waterproof lining.',
+      'You have a leaking terrace ahead of monsoon season, a bathroom that needs waterproofing under the tiles, a basement with water ingress, or a swimming pool that needs a long-lasting waterproof lining.',
     description:
       'Paver Chemco WP Membrane is a single-component flexible cementitious waterproofing membrane. Applied in 2–3 coats, it forms a seamless, crack-bridging membrane that bonds directly to concrete, plaster, and masonry. Safe for potable water tanks and resistant to pool chemicals after full cure.',
     recommended: [

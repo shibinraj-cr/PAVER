@@ -150,7 +150,7 @@ export default function HomePage() {
               className="inline-flex items-center gap-2 bg-brand-red/20 border border-brand-red/30 text-brand-gold-light px-4 py-1.5 rounded-full text-xs font-700 font-condensed uppercase tracking-widest mb-6 animate-slide-up"
               style={{ animationDelay: '0.15s', animationFillMode: 'both' }}
             >
-              Kerala &amp; Tamil Nadu
+              Tropical Monsoon Regions
             </div>
             <h1 className="text-white font-condensed font-800 text-5xl md:text-6xl lg:text-7xl leading-none mb-6 overflow-hidden">
               <span className="block animate-slide-up" style={{ animationDelay: '0.25s', animationFillMode: 'both' }}>Superior</span>
@@ -158,7 +158,7 @@ export default function HomePage() {
               <span className="block animate-slide-up" style={{ animationDelay: '0.55s', animationFillMode: 'both' }}>Chemical Solutions</span>
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-lg animate-slide-up" style={{ animationDelay: '0.7s', animationFillMode: 'both' }}>
-              Premium tile adhesives, block mortar, grout, and waterproofing products engineered for Kerala&apos;s monsoon climate and Tamil Nadu&apos;s diverse conditions.
+              Premium tile adhesives, block mortar, grout, and waterproofing products engineered for tropical monsoon climates, high humidity, and extreme heat conditions.
             </p>
             <div className="flex flex-wrap gap-4 mb-10 animate-slide-up" style={{ animationDelay: '0.85s', animationFillMode: 'both' }}>
               <Link href="/products" className="btn-primary">
@@ -241,7 +241,7 @@ export default function HomePage() {
               Professional Grade Solutions
             </h2>
             <p className="text-brand-mid-gray max-w-2xl mx-auto">
-              From tile adhesives to waterproofing membranes — every product engineered for Kerala and Tamil Nadu&apos;s construction demands.
+              From tile adhesives to waterproofing membranes — every product engineered for tropical monsoon climates and demanding construction environments.
             </p>
           </AnimateOnScroll>
 
@@ -287,17 +287,17 @@ export default function HomePage() {
           <AnimateOnScroll variant="fadeLeft">
             <p className="section-label text-brand-gold mb-2">Why Choose Us</p>
             <h2 className="font-condensed font-800 text-4xl md:text-5xl text-white leading-tight mb-6">
-              Built for Kerala &amp; Tamil Nadu
+              Built for Tropical Climates
             </h2>
             <p className="text-gray-300 leading-relaxed mb-8">
-              Paver Chemco products are specifically formulated for South India&apos;s climate — handling Kerala&apos;s intense monsoon, Tamil Nadu&apos;s heat, and the unique challenges of modern lightweight construction.
+              Paver Chemco products are specifically formulated for demanding tropical environments — handling intense monsoon rainfall, year-round high humidity, extreme summer heat, and the unique challenges of modern lightweight construction.
             </p>
             <div className="space-y-4">
               {[
-                { title: 'Monsoon Ready', desc: "Products tested for Kerala's 3,000+ mm annual rainfall and high humidity" },
-                { title: 'Heat Tolerant', desc: "Engineered for Tamil Nadu's 40°C+ summer temperatures" },
+                { title: 'Monsoon Ready', desc: 'Tested for 3,000+ mm annual rainfall and year-round high humidity conditions' },
+                { title: 'Heat Tolerant', desc: 'Engineered to perform in 40°C+ summer temperatures without bond failure' },
                 { title: 'AAC Block Compatible', desc: 'Specialised mortar for modern lightweight block construction' },
-                { title: 'Kerala & Tamil Nadu Distribution', desc: 'Wide dealer network across both states for fast availability' },
+                { title: 'Wide Distribution Network', desc: 'Extensive dealer network for fast, reliable product availability' },
               ].map((item, i) => (
                 <div key={item.title} className="flex gap-4 animate-slide-up" style={{ animationDelay: `${i * 0.1}s`, animationFillMode: 'both' }}>
                   <CheckCircle2 className="text-brand-gold mt-0.5 shrink-0" size={18} />
@@ -322,7 +322,7 @@ export default function HomePage() {
                 { value: '6', label: 'Product Categories', sub: 'Adhesive, Mortar, Grout, WP' },
                 { value: 'C1T/C1TE', label: 'Tile Adhesive Grade', sub: 'Interior & Exterior' },
                 { value: '≥0.8', label: 'N/mm² Bond Strength', sub: 'Block Jointing Mortar' },
-                { value: '2', label: 'States Covered', sub: 'Kerala & Tamil Nadu' },
+                { value: '2+', label: 'Regions Covered', sub: 'Tropical Monsoon Zones' },
               ].map((stat, i) => (
                 <div key={stat.label} className="bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 hover:border-brand-gold/30 transition-all duration-300 group">
                   <div className="font-condensed font-800 text-3xl text-brand-gold mb-1 group-hover:scale-110 transition-transform origin-left">{stat.value}</div>
@@ -477,7 +477,7 @@ export default function HomePage() {
             Ready to Build Better?
           </h2>
           <p className="text-white/85 text-lg mb-8">
-            Find a Paver Chemco dealer near you in Kerala or Tamil Nadu, or contact us directly for bulk orders and project pricing.
+            Find a Paver Chemco dealer near you or contact us directly for bulk orders and project pricing.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="btn-outline-white">

@@ -160,7 +160,7 @@ const selectorQ = [
       { label: 'Interior (inside the building)', value: 'interior' },
       { label: 'Exterior (outside, terrace, balcony)', value: 'exterior' },
       { label: 'Swimming pool / water tank', value: 'pool' },
-      { label: 'Not sure', value: 'interior' },
+      { label: 'Not sure', value: 'notsure' },
     ],
   },
 ]

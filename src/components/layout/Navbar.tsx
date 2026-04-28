@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className="bg-brand-dark text-white text-xs py-1.5 hidden md:block">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
           <span className="text-gray-400">
-            Distributing across <span className="text-brand-gold font-semibold">Kerala & Tamil Nadu</span>
+            Trusted across <span className="text-brand-gold font-semibold">Tropical Monsoon Regions</span>
           </span>
           <div className="flex items-center gap-6">
             <a href={`tel:${siteConfig.phone}`} className="flex items-center gap-1.5 hover:text-brand-gold transition-colors">
@@ -65,7 +65,7 @@ export default function Navbar() {
                   Construction Chemicals
                 </div>
                 <div className="text-[9px] text-brand-mid-gray leading-tight">
-                  Kerala &amp; Tamil Nadu
+                  Tropical Monsoon Regions
                 </div>
               </div>
             </Link>
