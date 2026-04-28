@@ -4,6 +4,20 @@ import { Resend } from 'resend'
 const TO_EMAIL = 'business@furner.in'
 const FROM_EMAIL = 'Paver Chemco <onboarding@resend.dev>'
 
+async function appendToSheet(data: Record<string, string>) {
+  const webhookUrl = process.env.SHEETS_WEBHOOK_URL
+  if (!webhookUrl) return
+  try {
+    await fetch(webhookUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+  } catch (e) {
+    console.error('[Sheets webhook error]', e)
+  }
+}
+
 export async function POST(req: NextRequest) {
   const body = await req.json()
   const { name, phone, email, location, product, message } = body
@@ -15,9 +29,15 @@ export async function POST(req: NextRequest) {
     )
   }
 
+  const timestamp = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
+  const formData = { timestamp, name, phone, email: email || '', location: location || '', product: product || '', message: message || '' }
+
+  // Always try to append to Google Sheet (fire-and-forget)
+  await appendToSheet(formData)
+
   const apiKey = process.env.RESEND_API_KEY
   if (!apiKey) {
-    console.log('[Contact Form — no RESEND_API_KEY]', { name, phone, email, location, product, message })
+    console.log('[Contact Form — no RESEND_API_KEY]', formData)
     return NextResponse.json({ success: true, message: 'Thank you, we will contact you shortly' })
   }
 
@@ -62,7 +82,7 @@ export async function POST(req: NextRequest) {
           </table>
         </div>
         <p style="color:#aaa;font-size:11px;margin-top:16px;text-align:center">
-          Submitted via paverchemco.com
+          Submitted ${timestamp} IST via paverchemco.com
         </p>
       </div>
     `,
