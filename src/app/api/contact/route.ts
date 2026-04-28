@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { Resend } from 'resend'
+import nodemailer from 'nodemailer'
 
 const TO_EMAIL = 'business@furner.in'
-const FROM_EMAIL = 'Paver Chemco <onboarding@resend.dev>'
 
 async function appendToSheet(data: Record<string, string>) {
   const webhookUrl = process.env.SHEETS_WEBHOOK_URL
@@ -30,66 +29,76 @@ export async function POST(req: NextRequest) {
   }
 
   const timestamp = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
-  const formData = { timestamp, name, phone, email: email || '', location: location || '', product: product || '', message: message || '' }
+  const formData = {
+    timestamp, name, phone,
+    email: email || '',
+    location: location || '',
+    product: product || '',
+    message: message || '',
+  }
 
-  // Always try to append to Google Sheet (fire-and-forget)
   await appendToSheet(formData)
 
-  const apiKey = process.env.RESEND_API_KEY
-  if (!apiKey) {
-    console.log('[Contact Form — no RESEND_API_KEY]', formData)
+  const gmailUser = process.env.GMAIL_USER
+  const gmailPass = process.env.GMAIL_APP_PASSWORD
+
+  if (!gmailUser || !gmailPass) {
+    console.log('[Contact — Gmail not configured]', formData)
     return NextResponse.json({ success: true, message: 'Thank you, we will contact you shortly' })
   }
 
-  const resend = new Resend(apiKey)
-
-  const { error } = await resend.emails.send({
-    from: FROM_EMAIL,
-    to: TO_EMAIL,
-    replyTo: email || undefined,
-    subject: `New Enquiry from ${name} — Paver Chemco`,
-    html: `
-      <div style="font-family:sans-serif;max-width:600px;margin:0 auto">
-        <div style="background:#c0392b;padding:24px 32px;border-radius:8px 8px 0 0">
-          <h1 style="color:#fff;margin:0;font-size:20px;font-weight:700">New Paver Chemco Enquiry</h1>
-        </div>
-        <div style="background:#fff;border:1px solid #e5e5e5;border-top:none;border-radius:0 0 8px 8px;padding:0">
-          <table style="border-collapse:collapse;width:100%">
-            <tr>
-              <td style="padding:14px 24px;font-weight:700;color:#555;width:140px;border-bottom:1px solid #f0f0f0">Name</td>
-              <td style="padding:14px 24px;color:#222;border-bottom:1px solid #f0f0f0">${name}</td>
-            </tr>
-            <tr style="background:#fafafa">
-              <td style="padding:14px 24px;font-weight:700;color:#555;border-bottom:1px solid #f0f0f0">Phone</td>
-              <td style="padding:14px 24px;color:#222;border-bottom:1px solid #f0f0f0">${phone}</td>
-            </tr>
-            <tr>
-              <td style="padding:14px 24px;font-weight:700;color:#555;border-bottom:1px solid #f0f0f0">Email</td>
-              <td style="padding:14px 24px;color:#222;border-bottom:1px solid #f0f0f0">${email || '—'}</td>
-            </tr>
-            <tr style="background:#fafafa">
-              <td style="padding:14px 24px;font-weight:700;color:#555;border-bottom:1px solid #f0f0f0">Location</td>
-              <td style="padding:14px 24px;color:#222;border-bottom:1px solid #f0f0f0">${location || '—'}</td>
-            </tr>
-            <tr>
-              <td style="padding:14px 24px;font-weight:700;color:#555;border-bottom:1px solid #f0f0f0">Product Interest</td>
-              <td style="padding:14px 24px;color:#222;border-bottom:1px solid #f0f0f0">${product || '—'}</td>
-            </tr>
-            <tr style="background:#fafafa">
-              <td style="padding:14px 24px;font-weight:700;color:#555;vertical-align:top">Message</td>
-              <td style="padding:14px 24px;color:#222;white-space:pre-wrap">${message || '—'}</td>
-            </tr>
-          </table>
-        </div>
-        <p style="color:#aaa;font-size:11px;margin-top:16px;text-align:center">
-          Submitted ${timestamp} IST via paverchemco.com
-        </p>
-      </div>
-    `,
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: { user: gmailUser, pass: gmailPass },
   })
 
-  if (error) {
-    console.error('[Resend error]', error)
+  try {
+    await transporter.sendMail({
+      from: `"Paver Chemco" <${gmailUser}>`,
+      to: TO_EMAIL,
+      replyTo: email || undefined,
+      subject: `New Enquiry from ${name} — Paver Chemco`,
+      html: `
+        <div style="font-family:sans-serif;max-width:600px;margin:0 auto">
+          <div style="background:#c0392b;padding:24px 32px;border-radius:8px 8px 0 0">
+            <h1 style="color:#fff;margin:0;font-size:20px;font-weight:700">New Paver Chemco Enquiry</h1>
+          </div>
+          <div style="background:#fff;border:1px solid #e5e5e5;border-top:none;border-radius:0 0 8px 8px">
+            <table style="border-collapse:collapse;width:100%">
+              <tr>
+                <td style="padding:14px 24px;font-weight:700;color:#555;width:140px;border-bottom:1px solid #f0f0f0">Name</td>
+                <td style="padding:14px 24px;color:#222;border-bottom:1px solid #f0f0f0">${name}</td>
+              </tr>
+              <tr style="background:#fafafa">
+                <td style="padding:14px 24px;font-weight:700;color:#555;border-bottom:1px solid #f0f0f0">Phone</td>
+                <td style="padding:14px 24px;color:#222;border-bottom:1px solid #f0f0f0">${phone}</td>
+              </tr>
+              <tr>
+                <td style="padding:14px 24px;font-weight:700;color:#555;border-bottom:1px solid #f0f0f0">Email</td>
+                <td style="padding:14px 24px;color:#222;border-bottom:1px solid #f0f0f0">${email || '—'}</td>
+              </tr>
+              <tr style="background:#fafafa">
+                <td style="padding:14px 24px;font-weight:700;color:#555;border-bottom:1px solid #f0f0f0">Location</td>
+                <td style="padding:14px 24px;color:#222;border-bottom:1px solid #f0f0f0">${location || '—'}</td>
+              </tr>
+              <tr>
+                <td style="padding:14px 24px;font-weight:700;color:#555;border-bottom:1px solid #f0f0f0">Product Interest</td>
+                <td style="padding:14px 24px;color:#222;border-bottom:1px solid #f0f0f0">${product || '—'}</td>
+              </tr>
+              <tr style="background:#fafafa">
+                <td style="padding:14px 24px;font-weight:700;color:#555;vertical-align:top">Message</td>
+                <td style="padding:14px 24px;color:#222;white-space:pre-wrap">${message || '—'}</td>
+              </tr>
+            </table>
+          </div>
+          <p style="color:#aaa;font-size:11px;margin-top:16px;text-align:center">
+            Submitted ${timestamp} IST via paverchemco.com
+          </p>
+        </div>
+      `,
+    })
+  } catch (err) {
+    console.error('[Gmail SMTP error]', err)
     return NextResponse.json(
       { success: false, message: 'Failed to send email. Please call us directly.' },
       { status: 500 }
