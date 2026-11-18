@@ -9,7 +9,7 @@ export const siteConfig = {
   url: 'https://www.paverchemco.com',
   logo: '/images/logo-red.png',
   phone: '+91 9994491827',
-  phone2: '+91 80781 39963',
+  phone2: '+91 63820 13772',
   email: 'business@furner.in',
   address: 'No: 11/891 Malabar Shopping Mahal, Mele Pattambi, Kerala-679306, India',
   cin: 'U23913KL2024PTC085623',
