@@ -172,7 +172,7 @@ export default function HomePage() {
               {[
                 { value: '6+', label: 'Premium Products' },
                 { value: 'ISO', label: 'Quality Assured' },
-                { value: '2',  label: 'States Served' },
+                { value: 'South', label: 'Regional Presence' },
               ].map((b) => (
                 <div key={b.label} className="text-center">
                   <div className="text-brand-gold font-condensed font-800 text-2xl">{b.value}</div>
