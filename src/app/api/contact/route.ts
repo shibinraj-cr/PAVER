@@ -92,7 +92,7 @@ export async function POST(req: NextRequest) {
             </table>
           </div>
           <p style="color:#aaa;font-size:11px;margin-top:16px;text-align:center">
-            Submitted ${timestamp} IST via paverchemco.com
+            Submitted ${timestamp} IST via paverchemco.in
           </p>
         </div>
       `,

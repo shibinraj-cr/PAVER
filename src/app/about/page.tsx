@@ -96,7 +96,7 @@ export default function AboutPage() {
                   { label: 'CIN', value: 'U23913KL2024PTC085623' },
                   { label: 'Email', value: siteConfig.email },
                   { label: 'Phone', value: siteConfig.phone },
-                  { label: 'Website', value: 'www.paverchemco.com' },
+                  { label: 'Website', value: 'www.paverchemco.in' },
                 ].map(({ label, value }) => (
                   <div key={label} className="flex gap-3">
                     <span className="font-600 text-brand-dark w-32 shrink-0">{label}:</span>

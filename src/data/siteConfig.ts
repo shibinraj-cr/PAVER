@@ -6,7 +6,7 @@ export const siteConfig = {
   tagline: 'Superior Construction Chemical Solutions',
   description:
     'Paver Chemco by Furner RefraCeram — premium tile adhesives, block jointing mortar, tile grout, epoxy grout, and waterproofing solutions engineered for tropical monsoon climates.',
-  url: 'https://www.paverchemco.com',
+  url: 'https://www.paverchemco.in',
   logo: '/images/logo-red.png',
   phone: '+91 9994491827',
   phone2: '+91 63820 13772',
